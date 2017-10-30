@@ -1,0 +1,1 @@
+create table videos_by_title_year (title text, added_year int, added_date timestamp, description text, user_id uuid, video_id uuid, primary key(title, added_year));

@@ -1,0 +1,1 @@
+copy videos_by_title_year from 'videos_by_title_year.csv' with HEADER = true and DATETIMEFORMAT='%d/%m/%Y';
