@@ -1,0 +1,2 @@
+# Keyspace creation for videos 	website 
+create keyspace killrvideo WITH REPLICATION = { 'replication_factor':1, 'class' : 'SimpleStrategy'};

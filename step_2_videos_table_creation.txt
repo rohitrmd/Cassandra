@@ -1,0 +1,1 @@
+create table videos (video_id timeuuid, added_date timestamp, description text, title text, user_id uuid, PRIMARY KEY(video_id));
