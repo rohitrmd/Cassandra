@@ -1,0 +1,7 @@
+create table videos_count_by_tag( tag text, added_year int, video_count counter, primary key((tag), added_year));
+
+# loading data as upserts
+source 'videos_count_by_tag.cql'
+
+# one sample upsert
+update videos_count_by_tag set video_count = video_count+10 where tag = 'You Are Awesome' and added_year=2015;
