@@ -1,0 +1,7 @@
+create table videos (video_id timeuuid, added_date timestamp, description text, title text, user_id uuid, PRIMARY KEY(video_id));
+
+# Add tags column
+alter table videos add tags set<text>;
+
+# Copy data to table 
+copy videos from 'videos_and_tags.csv' with header=true;
