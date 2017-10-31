@@ -1,0 +1,5 @@
+create type encoding (bit_rates set<text>,  encoding text, height int, width int);
+
+alter table videos add encoding frozen<encoding>;
+
+copy videos(videos_id, encoding) from 'videos_encoding.csv';
