@@ -1,0 +1,16 @@
+create table videos_by_actor(
+              ... actor text,
+              ... added_date timestamp,
+              ... video_id timeuuid,
+              ... character_name text,
+              ... description text,
+              ... encoding frozen<encoding>,
+              ... tags set<text>,
+              ... title text,
+              ... user_id uuid,
+              ... PRIMARY KEY ((actor), added_date, video_id, character_name))
+              ... with clustering order by (added_date DESC, video_id ASC, character_name ASC);
+
+
+# query by actor name
+select * from videos_by_actor where actor='Jeff Corey';
